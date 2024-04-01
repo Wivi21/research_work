@@ -4,13 +4,16 @@ import { motion } from 'framer-motion';
 import {GenerateAndDownloadPDF} from '@/functions'
 
 const preguntas = [
-  { id: 'question1', label: 'Pregunta 1: ¿Cuántas personas harán el viaje?', options: ['4 Personas', '6 Personas', '8 Personas'] },
-  { id: 'question2', label: 'Pregunta 2: ¿Duración de la estancia?', options: ['2 Semanas', '1 Mes', '2 Meses'] },
-  { id: 'question3', label: 'Pregunta 3: ¿En qué embarcación se hará?', options: ['Velero', 'Catamaran', ''] },
-  { id: 'question4', label: 'Pregunta 4: ¿Cómo se gestionarán los suministros?', options: ['1r Metodo (Digny)', '2n Metodo (Kayak)', '3r Metodo (Paddle Surf)'] },
-  { id: 'question5', label: 'Pregunta 5: ¿Cuál es la ubicación elegida?', options: ['Bahia de Fornells', 'Cala Galdana', 'Son Saura'] },
-  { id: 'question6', label: 'Pregunta 6:  ¿Cómo se obtendrá la comida?', options: ['Compra en tierra', 'Mediante pesca', ''] },
-  { id: 'question7', label: 'Pregunta 7: ¿De qué manera se obtendrá la energía?', options: ['Placas Solares', 'Eolica', 'Generador de gasolina'] },
+  { id: 'question1', label: 'Pregunta 1: ¿Cuántas personas harán el viaje?', options: 
+  ['4 Personas', '6 Personas', '8 Personas'
+], 
+  report: 'Personas:' },
+  { id: 'question2', label: '¿Duración de la estancia?', options: ['2 Semanas', '1 Mes', '2 Meses'], report: 'Duración:' },
+  { id: 'question3', label: '¿En qué embarcación se hará?', options: ['Velero', 'Catamaran'], report: 'Embarcación:'},
+  { id: 'question4', label: '¿Cómo se gestionarán los suministros?', options: ['1r Metodo (Digny)', '2n Metodo (Kayak)', '3r Metodo (Paddle Surf)'], report: 'Suministros:'},
+  { id: 'question5', label: '¿Cuál es la ubicación elegida?', options: ['Bahia de Fornells', 'Cala Galdana', 'Son Saura'], report: 'Ubicación:'},
+  { id: 'question6', label: '¿Cómo se obtendrá la comida?', options: ['Compra en tierra', 'Mediante pesca'], report: 'Comida:'},
+  { id: 'question7', label: '¿De qué manera se obtendrá la energía?', options: ['Placas Solares', 'Eolica', 'Generador de gasolina'], report: 'Energía:'},
 ];
 
 export const TravelPlanForm = () => {
@@ -66,7 +69,7 @@ export const TravelPlanForm = () => {
               className="w-full py-3 px-6 border border-transparent shadow-sm text-md font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
               type="submit"
             >
-              Enviar
+              Crear Planning
             </motion.button>
           </form>
         </div>

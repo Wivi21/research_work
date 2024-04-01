@@ -9,7 +9,7 @@ export const GenerateAndDownloadPDF = (respuestas, preguntas) => {
   const tableColumn = ["Pregunta", "Respuesta"];
   // Transforma las respuestas en un formato adecuado para autotable
   const tableRows = Object.keys(respuestas).map((key) => {
-    const pregunta = preguntas.find((p) => p.id === key).label;
+    const pregunta = preguntas.find((p) => p.id === key).report;
     const respuesta = respuestas[key];
     return [pregunta, respuesta];
   });

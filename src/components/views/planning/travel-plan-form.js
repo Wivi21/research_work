@@ -6,25 +6,25 @@ import { GenerateAndDownloadPDF } from "@/functions";
 const questions = [
   {
     id: "question1",
-    label: "Pregunta 1: ¿Cuántas personas harán el viaje?",
+    label: "¿Cuántas personas harán el viaje?",
     options: ["4 Personas", "6 Personas", "8 Personas"],
     report: "Personas",
   },
   {
     id: "question2",
-    label: "Pregunta 2: ¿Duración de la estancia?",
+    label: "¿Duración de la estancia?",
     options: ["2 Semanas", "4 Semanas", "6 Semanas"],
     report: "Duración",
   },
   {
     id: "question3",
-    label: "Pregunta 3: ¿En qué embarcación se hará?",
+    label: "¿En qué embarcación se hará?",
     options: ["Velero", "Catamaran"],
     report: "Embarcación",
   },
   {
     id: "question4",
-    label: "Pregunta 4: ¿Cómo se gestionarán los suministros?",
+    label: "¿Cómo se gestionarán los suministros?",
     options: [
       "1r Metodo (Digny)",
       "2n Metodo (Kayak)",
@@ -34,19 +34,19 @@ const questions = [
   },
   {
     id: "question5",
-    label: "Pregunta 5: ¿Cuál es la ubicación elegida?",
+    label: "¿Cuál es la ubicación elegida?",
     options: ["Bahia de Fornells", "Cala Galdana", "Son Saura"],
     report: "Ubicación",
   },
   {
     id: "question6",
-    label: "Pregunta 6:  ¿Cómo se obtendrá la comida?",
+    label: "¿Cómo se obtendrá la comida?",
     options: ["Compra en tierra", "Mediante pesca"],
     report: "Comida",
   },
   {
     id: "question7",
-    label: "Pregunta 7: ¿De qué manera se obtendrá la energía?",
+    label: "¿De qué manera se obtendrá la energía?",
     options: ["Placas Solares", "Eolica", "Generador de gasolina"],
     report: "Energía",
   },

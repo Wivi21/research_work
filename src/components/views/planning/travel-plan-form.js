@@ -1,6 +1,7 @@
 'use client'
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import {GenerateAndDownloadPDF} from '@/functions'
 
 const preguntas = [
   { id: 'question1', label: 'Pregunta 1: ¿Cuántas personas harán el viaje?', options: ['4 Personas', '6 Personas', '8 Personas'] },
@@ -24,8 +25,9 @@ export const TravelPlanForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(respuestas);
+    GenerateAndDownloadPDF(respuestas, preguntas);
   };
+
 
   return (
     <div className="min-h-screen flex flex-wrap items-center justify-center bg-gray-100" style={{

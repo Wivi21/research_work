@@ -26,7 +26,7 @@ const questions = [
     id: "question4",
     label: "¿Cómo se gestionarán los suministros?",
     options: [
-      "1r Metodo (Digny)",
+      "1r Metodo (Digny/Zodiac)",
       "2n Metodo (Kayak)",
       "3r Metodo (Paddle Surf)",
     ],

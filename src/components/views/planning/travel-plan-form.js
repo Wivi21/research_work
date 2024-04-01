@@ -6,14 +6,11 @@ import {GenerateAndDownloadPDF} from '@/functions'
 const preguntas = [
   { id: 'question1', label: 'Pregunta 1: ¿Cuántas personas harán el viaje?', options: ['4 Personas', '6 Personas', '8 Personas'] },
   { id: 'question2', label: 'Pregunta 2: ¿Duración de la estancia?', options: ['2 Semanas', '1 Mes', '2 Meses'] },
-  { id: 'question3', label: 'Pregunta 2: ¿Duración de la estancia?', options: ['2 Semanas', '1 Mes', '2 Meses'] },
-  { id: 'question4', label: 'Pregunta 2: ¿Duración de la estancia?', options: ['2 Semanas', '1 Mes', '2 Meses'] },
-  { id: 'question5', label: 'Pregunta 2: ¿Duración de la estancia?', options: ['2 Semanas', '1 Mes', '2 Meses'] },
-  { id: 'question6', label: 'Pregunta 2: ¿Duración de la estancia?', options: ['2 Semanas', '1 Mes', '2 Meses'] },
-  { id: 'question7', label: 'Pregunta 2: ¿Duración de la estancia?', options: ['2 Semanas', '1 Mes', '2 Meses'] },
-  { id: 'question8', label: 'Pregunta 2: ¿Duración de la estancia?', options: ['2 Semanas', '1 Mes', '2 Meses'] },
-  { id: 'question9', label: 'Pregunta 2: ¿Duración de la estancia?', options: ['2 Semanas', '1 Mes', '2 Meses'] },
-  { id: 'question10', label: 'Pregunta 2: ¿Duración de la estancia?', options: ['2 Semanas', '1 Mes', '2 Meses'] },
+  { id: 'question3', label: 'Pregunta 3: ¿En qué embarcación se hará?', options: ['Velero', 'Catamaran', ''] },
+  { id: 'question4', label: 'Pregunta 4: ¿Cómo se gestionarán los suministros?', options: ['1r Metodo (Digny)', '2n Metodo (Kayak)', '3r Metodo (Paddle Surf)'] },
+  { id: 'question5', label: 'Pregunta 5: ¿Cuál es la ubicación elegida?', options: ['Bahia de Fornells', 'Cala Galdana', 'Son Saura'] },
+  { id: 'question6', label: 'Pregunta 6:  ¿Cómo se obtendrá la comida?', options: ['Compra en tierra', 'Mediante pesca', ''] },
+  { id: 'question7', label: 'Pregunta 7: ¿De qué manera se obtendrá la energía?', options: ['Placas Solares', 'Eolica', 'Generador de gasolina'] },
 ];
 
 export const TravelPlanForm = () => {

@@ -1,7 +1,7 @@
 import jsPDF from "jspdf";
 import "jspdf-autotable";
 
-export const GenerateAndDownloadPDF = (respuestas, preguntas) => {
+export const GenerateAndDownloadPDF = (respuestas, preguntas, price) => {
   // Crea una instancia de jsPDF
   const doc = new jsPDF();
 
@@ -13,7 +13,7 @@ export const GenerateAndDownloadPDF = (respuestas, preguntas) => {
     const respuesta = respuestas[key];
     return [pregunta, respuesta];
   });
-
+tableRows.push(["Precio total", `${price} €`])
   // Añade la tabla al documento
   doc.autoTable(tableColumn, tableRows, { startY: 20 });
   const date = Date().split(" ");

@@ -5,7 +5,10 @@ import Link from 'next/link';
 
 export const HomeHero = () => {
   return (
-    <div className="bg-blue-600 text-white h-screen flex flex-col justify-center items-center space-y-6 px-4">
+    <div  style={{
+      backgroundImage: "url(/fondomar2.jpg)",
+      backgroundSize: "cover",
+    }} className="text-white h-screen flex flex-col justify-center items-center space-y-6 px-4">
       <motion.h1
         className="text-5xl font-bold text-center"
         initial={{ y: -150, opacity: 0 }}
@@ -20,7 +23,7 @@ export const HomeHero = () => {
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.8, delay: 0.4 }}
       >
-        Descubre la belleza de Menorca desde el mar. Comienza tu viaje con nosotros.
+        Descubre la belleza de Menorca desde el mar. Comienza tu viaje con un plan de viaje personalizado.
       </motion.p>
       <Link href="/planning" passHref>
         <motion.p

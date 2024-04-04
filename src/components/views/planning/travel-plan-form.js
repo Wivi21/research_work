@@ -58,17 +58,37 @@ export const TravelPlanForm = () => {
   );
   const [price, setPrice] = useState(0);
   const [showButton, setShowButton] = useState(false);
+  // Nuevo estado para almacenar la variante de la ubicación
+  const [locationVariant, setLocationVariant] = useState("");
 
   const handleInputChange = (id, value) => {
     const newResponses = { ...responses };
     newResponses[id] = value;
     setResponses({ ...newResponses });
+  
+    // Actualiza el botón de mostrar basado en la respuesta a la última pregunta
     if (newResponses[questions[6].id] !== "") setShowButton(true);
     else setShowButton(false);
-    // Calcular el precio aquí basado en las respuestas
+  
+    // Actualiza el estado de locationVariant basado en la respuesta a question5
+    if (id === "question5") {
+      switch (value) {
+        case "Bahia de Fornells":
+          setLocationVariant("Variante1");
+          break;
+        case "Cala Galdana":
+          setLocationVariant("Variante2");
+          break;
+        case "Son Saura":
+          setLocationVariant("Variante3");
+          break;
+        // Omitido el caso default para no resetear el valor
+      }
+    }
+  
+    // Aquí reintegramos la lógica para calcular el precio
     let calculatedPrice = 0;
-
-    // Ejemplo de lógica para calcular el precio
+  
     if (newResponses["question1"]) {
       calculatedPrice += newResponses["question1"].includes("4") ? 1000 : newResponses["question1"].includes("6") ? 1500 : 2000;
     }
@@ -78,16 +98,18 @@ export const TravelPlanForm = () => {
     if (newResponses["question3"]) {
       calculatedPrice += newResponses["question3"].includes("Velero") ? 300 : 600;
     }
-    // Continúa con el resto de preguntas...
-
+    // Continúa con el resto de preguntas para calcular el precio...
+    
+    // No olvides incluir la lógica para calcular la variación del precio basado en la ubicación si es necesario
+  
     // Finalmente, actualiza el estado del precio
     setPrice(calculatedPrice);
-
   };
+  
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    GenerateAndDownloadPDF(responses, questions, price);
+    GenerateAndDownloadPDF(responses, questions, price, locationVariant); // Asegúrate de que esta función maneje el nuevo estado si es necesario
   };
 
   return (

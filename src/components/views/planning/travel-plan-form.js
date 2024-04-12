@@ -96,7 +96,7 @@ export const TravelPlanForm = () => {
       calculatedPrice += newResponses["question2"].includes("2 Semanas") ? 500 : newResponses["question2"].includes("4 Semanas") ? 1000 : 1500;
     }
     if (newResponses["question3"]) {
-      calculatedPrice += newResponses["question3"].includes("Velero") ? 300 : 600;
+      calculatedPrice += newResponses["question3"].includes("Velero") ? 300 : 800;
     }
     // Continúa con el resto de preguntas para calcular el precio...
     
